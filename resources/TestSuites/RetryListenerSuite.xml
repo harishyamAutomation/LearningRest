@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="RestAPI : Test Suite for Retry Tests using Test Listeners">
+	<listeners>
+		<listener class-name="utils.RetryListener"></listener>
+	</listeners>
+	<test name="RestAPI : Test Suite for Retry Tests using Test Listeners">
+		<classes>
+			<class name="userManagement.RequestBodyString"></class>
+			<class name="userManagement.PostmanEcho"></class>
+			<class name="userManagement.FileUploadDownload"></class>			
+		</classes>
+	</test>
+</suite>

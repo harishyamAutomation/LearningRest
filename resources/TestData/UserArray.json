@@ -1,0 +1,18 @@
+{
+  "id": 7517363,
+  "name": "Damodara Ahuja",
+  "email": "damodara_ahuja@fahey.test",
+  "gender": "male",
+  "status": "inactive",
+  "contact" : [
+  	1,
+  	2,
+  	3
+  ],
+  "marks" : [
+  	{
+  		"english" : "200",
+  		"math" : "210"
+  	}
+  ]
+}

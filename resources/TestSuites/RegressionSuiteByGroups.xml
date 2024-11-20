@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="RestAPI : Regression Suite by Groups">
+	<test name="Regression Suite by Groups">
+		<groups>
+			<run>
+				<include name="RegressionSuite"/>
+			</run>
+		</groups>
+		<classes>
+			<class name="userManagement.PostmanEcho"></class>
+			<class name="userManagement.getUser"></class>
+		</classes>
+	</test>
+</suite>

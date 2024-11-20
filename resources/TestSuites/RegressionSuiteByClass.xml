@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="RestAPI : Regression Suite Class Level">
+	<test name="RestAPI Regression Test cases by class">
+		<classes>
+			<class name="userManagement.getUser"></class>
+			<class name="userManagement.PostmanEcho"></class>
+		</classes>
+	</test>
+</suite>

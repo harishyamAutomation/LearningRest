@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Automation Regression Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="RestAPI : Regression Test Cases(failed)">
+    <classes>
+      <class name="userManagement.getUser">
+        <methods>
+          <include name="automateOAuth1"/>
+          <include name="automateFormParams"/>
+        </methods>
+      </class> <!-- userManagement.getUser -->
+    </classes>
+  </test> <!-- RestAPI : Regression Test Cases(failed) -->
+</suite> <!-- Failed suite [Automation Regression Suite] -->

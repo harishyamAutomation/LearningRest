@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="RestAPI : Parallel Test Suite Execution with Thread Count" parallel="classes" thread-count="8">
+	<test name="RestAPI : GetUser">
+		<classes>
+			<class name="userManagement.getUser"></class>
+		</classes>
+	</test>
+	<test name="RestAPI : PostmanEcho">
+		<classes>
+			<class name="userManagement.PostmanEcho"></class>
+		</classes>
+	</test>
+</suite>
