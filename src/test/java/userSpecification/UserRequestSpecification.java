@@ -1,21 +1,7 @@
 package userSpecification;
 
-import io.restassured.authentication.OAuthSignature;
 import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import utils.ExtentReport;
-import utils.SoftAssertionUtil;
-
-import org.testng.annotations.Test;
-
-import core.StatusCode;
-import helper.BaseTestHelper;
-
-import static io.restassured.RestAssured.*;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
-import static org.testng.Assert.assertEquals;
 
 public class UserRequestSpecification {
 	
