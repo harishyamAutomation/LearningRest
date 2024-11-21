@@ -213,7 +213,7 @@ public class getUser extends BaseTest{
     public void automateOAuth1() {
     	baseURI = "https://postman-echo.com";
     	
-    	ExtentReport.extentLog = ExtentReport.extentReport.startTest("automateOAuth1", "Automate OAuth1.0 Authorization");// first parameter will be the name and second parameter will have the description about the test case
+    	//ExtentReport.extentLog = ExtentReport.extentReport.startTest("automateOAuth1", "Automate OAuth1.0 Authorization");// first parameter will be the name and second parameter will have the description about the test case
     	
     	Response resp = given().auth().oauth("RKCGzna7bv9YD57c", "D+EdQ-gs$-%@2Nu7", "", "", OAuthSignature.HEADER).get();
     	
@@ -228,7 +228,7 @@ public class getUser extends BaseTest{
     	baseURI = "https://postman-echo.com";
     	
     	
-    	ExtentReport.extentLog = ExtentReport.extentReport.startTest("testDataFromJSONFile", "Fetch the TestData from JSON file and use in the script");// first parameter will be the name and second parameter will have the description about the test case
+    	//ExtentReport.extentLog = ExtentReport.extentReport.startTest("testDataFromJSONFile", "Fetch the TestData from JSON file and use in the script");// first parameter will be the name and second parameter will have the description about the test case
     	
     	Response resp = given().auth().basic(username, password).get("/basic-auth");
     	
@@ -245,7 +245,7 @@ public class getUser extends BaseTest{
     	String username = JSONReader.getTestData("username");
     	String password = JSONReader.getTestData("password");
     	
-    	ExtentReport.extentLog = ExtentReport.extentReport.startTest("testDataFromJSON_dataFromPropertiesFile", "Automate script using TestData from JSON and config from Properties file");// first parameter will be the name and second parameter will have the description about the test case
+    	//ExtentReport.extentLog = ExtentReport.extentReport.startTest("testDataFromJSON_dataFromPropertiesFile", "Automate script using TestData from JSON and config from Properties file");// first parameter will be the name and second parameter will have the description about the test case
     	
     	Response resp = given().auth().basic(username, password).get(endPointBasic);
     	
@@ -262,8 +262,8 @@ public class getUser extends BaseTest{
         queryParams.put("page", 2);
         queryParams.put("per_page", 6);
         
-        ExtentReport.extentLog = ExtentReport.extentReport.startTest("automateMultipleQueryParamsUsingMap", "Automate multiple query parameters using Map");// first parameter will be the name and second parameter will have the description about the test case
-        
+      // ExtentReport.startTest("automateMultipleQueryParamsUsingMap", "Automate multiple query parameters using Map");// first parameter will be the name and second parameter will have the description about the test case
+       
         Response response = given()
                 .params(queryParams)
                 .when().get("/users");

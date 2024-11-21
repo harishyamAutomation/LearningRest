@@ -88,7 +88,7 @@ public class UserSerializationDeserialization extends BaseTest {
 //		createUser.setJob(job);
 //		createUser.setCity(cityList);
 		
-		ExtentReport.extentLog = ExtentReport.extentReport.startTest("createNewUser", "Create a New User");// first parameter will be the name and second parameter will have the description about the test case
+		//ExtentReport.extentLog = ExtentReport.extentReport.startTest("createNewUser", "Create a New User");// first parameter will be the name and second parameter will have the description about the test case
 		
 		Response resp = given()
 							.body(user())
@@ -114,7 +114,7 @@ public class UserSerializationDeserialization extends BaseTest {
 	public void getSingleUser() {
 		baseURI = "http://localhost:3000/";
 		
-		ExtentReport.extentLog = ExtentReport.extentReport.startTest("getSingleUser", "Fetch the created user's data");
+		//ExtentReport.extentLog = ExtentReport.extentReport.startTest("getSingleUser", "Fetch the created user's data");
 		
 		Response resp = given()
 						.when()
@@ -132,7 +132,7 @@ public class UserSerializationDeserialization extends BaseTest {
 		
 		job = "Lead SDET";
 		
-		ExtentReport.extentLog = ExtentReport.extentReport.startTest("updateJobUsingCompletePayload", "Updated the Job for the created user");
+		//ExtentReport.extentLog = ExtentReport.extentReport.startTest("updateJobUsingCompletePayload", "Updated the Job for the created user");
 		
 		Response resp = given()
 						.body(user())
@@ -147,7 +147,7 @@ public class UserSerializationDeserialization extends BaseTest {
 	public void deleteSingleUser() {
 		baseURI = "http://localhost:3000/";
 		
-		ExtentReport.extentLog = ExtentReport.extentReport.startTest("deleteSingleUser", "Delete the created user's record");
+		//ExtentReport.extentLog = ExtentReport.extentReport.startTest("deleteSingleUser", "Delete the created user's record");
 		
 		Response resp = given()
 						.when()

@@ -5,7 +5,7 @@
 	<test name="RestAPI : Parallel Test Suite Execution with Thread Count">
 		<classes>
 			<class name="userManagement.RequestBodyExternalJSON"></class>
-			<!-- <class name="userManagement.PostmanEcho"></class> -->
+			<class name="userManagement.PostmanEcho"></class>
 		</classes>
 	</test>
 </suite>

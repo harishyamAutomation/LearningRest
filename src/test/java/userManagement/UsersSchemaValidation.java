@@ -22,7 +22,7 @@ public class UsersSchemaValidation extends BaseTest {
 		String contentType = "application/json";
 		String userid = "b390";
 		
-		ExtentReport.extentLog = ExtentReport.extentReport.startTest("getAndValidateUserSchema", "Validate Schema for the user");
+		//ExtentReport.extentLog = ExtentReport.extentReport.startTest("getAndValidateUserSchema", "Validate Schema for the user");
 		
 		File schema = new File("resources/userSchema.json");
 		System.out.println(schema.exists()?"Expected Schema found":"Sxpected Schema File not found");

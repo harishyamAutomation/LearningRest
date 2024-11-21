@@ -11,12 +11,13 @@ import java.io.IOException;
 import org.apache.commons.io.IOUtils;
 import org.testng.annotations.Test;
 
+import core.BaseTest;
 import core.StatusCode;
 import io.restassured.response.Response;
 import utils.ExtentReport;
 import utils.ExternalJSONRequestUtil;
 
-public class RequestBodyExternalJSON {
+public class RequestBodyExternalJSON extends BaseTest {
 	@Test(description = "Request Body as External JSON")
     public void requestBodyAsExternalJSON() throws FileNotFoundException, IOException {
         baseURI = "https://reqres.in/api";

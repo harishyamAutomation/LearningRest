@@ -7,6 +7,7 @@ import utils.SoftAssertionUtil;
 
 import org.testng.annotations.Test;
 
+import core.BaseTest;
 import core.StatusCode;
 import helper.BaseTestHelper;
 
@@ -15,7 +16,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 import static org.testng.Assert.assertEquals;
 
-public class PostmanEcho extends BaseTestHelper{
+public class PostmanEcho extends BaseTest{
 	
 	SoftAssertionUtil softAssert = new SoftAssertionUtil();
 	
@@ -25,7 +26,7 @@ public class PostmanEcho extends BaseTestHelper{
     public void automateBasicAuth() {
     	baseURI = "https://postman-echo.com";
     	
-    	ExtentReport.extentLog = ExtentReport.extentReport.startTest("automateBasicAuth", "Automate Basic Authorization");// first parameter will be the name and second parameter will have the description about the test case
+    	//ExtentReport.extentLog = ExtentReport.extentReport.startTest("automateBasicAuth", "Automate Basic Authorization");// first parameter will be the name and second parameter will have the description about the test case
     	
     	Response resp = given().auth().basic("postman", "password").get("/basic-auth");
     	
