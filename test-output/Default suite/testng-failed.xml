@@ -3,32 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="userManagement.getUser">
+      <class name="restFullBooker.HealthCheck">
         <methods>
-          <include name="automateBasicAuth"/>
-          <include name="automateDigestAuth"/>
-          <include name="validateResponseHasSize"/>
-          <include name="validateResponseBodyUsingThen"/>
-          <include name="getResult"/>
-          <include name="validateListContainsItems"/>
-          <include name="validateResponseBodyUsingVariable"/>
-          <include name="getUserData"/>
-          <include name="testDataFromJSONFile"/>
-          <include name="automateMultipleQueryParams"/>
-          <include name="getUsersWithQueryParams"/>
-          <include name="validateResponseHasItems"/>
           <include name="endReport"/>
-          <include name="automateMultipleQueryParamsUsingMap"/>
-          <include name="validateListContainsNames"/>
-          <include name="testDataFromJSON_dataFromPropertiesFile"/>
-          <include name="testEndPoints"/>
+          <include name="fetchCustomerDetailByID"/>
+          <include name="fetchAllBookingIDs"/>
           <include name="logBeforeMethod"/>
-          <include name="validateResponseBody"/>
-          <include name="automateFormParams"/>
-          <include name="automatePathParams"/>
+          <include name="pingServerForHealthCheck"/>
+          <include name="getResult"/>
+          <include name="getAuthToken"/>
           <include name="config"/>
         </methods>
-      </class> <!-- userManagement.getUser -->
+      </class> <!-- restFullBooker.HealthCheck -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

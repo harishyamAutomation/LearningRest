@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="8" parallel="classes" name="Failed suite [RestAPI : Parallel Test Suite Execution with Thread Count]" guice-stage="DEVELOPMENT">
-  <test thread-count="8" parallel="classes" name="RestAPI : Parallel Test Suite Execution with Thread Count(failed)">
+<suite name="Failed suite [RestAPI : Regression Suite by Groups]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Regression Suite by Groups(failed)">
+    <groups>
+      <run>
+        <include name="RegressionSuite"/>
+      </run>
+    </groups>
     <classes>
+      <class name="userManagement.getUser">
+        <methods>
+          <include name="endReport"/>
+          <include name="automateMultipleQueryParamsUsingMap"/>
+          <include name="testDataFromJSON_dataFromPropertiesFile"/>
+          <include name="logBeforeMethod"/>
+          <include name="getResult"/>
+          <include name="testDataFromJSONFile"/>
+          <include name="config"/>
+        </methods>
+      </class> <!-- userManagement.getUser -->
       <class name="userManagement.PostmanEcho">
         <methods>
-          <include name="automateDigestAuth"/>
           <include name="endReport"/>
-          <include name="automateOAuth1"/>
+          <include name="automateBasicAuth"/>
           <include name="logBeforeMethod"/>
           <include name="getResult"/>
           <include name="config"/>
         </methods>
       </class> <!-- userManagement.PostmanEcho -->
     </classes>
-  </test> <!-- RestAPI : Parallel Test Suite Execution with Thread Count(failed) -->
-</suite> <!-- Failed suite [RestAPI : Parallel Test Suite Execution with Thread Count] -->
+  </test> <!-- Regression Suite by Groups(failed) -->
+</suite> <!-- Failed suite [RestAPI : Regression Suite by Groups] -->

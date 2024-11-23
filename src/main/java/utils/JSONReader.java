@@ -47,9 +47,15 @@ public class JSONReader {
 	
 		public static JSONObject getJsonData(String jsonData) throws IOException, ParseException {
 		
+		System.out.println("Started Parsing jsonString to Object");	
+		
 		Object obj = new JSONParser().parse(jsonData); //Parsing that string into Object using JSONParser, JSONParser <- org.json.simple
 		
+		System.out.println("Started Parsing Object to JSONObject");
+		
 		JSONObject jsonObject = (JSONObject) obj; //Converting that object into JSON Object, JSONObject <- org.json.simple
+		
+		System.out.println("Successfully parsed to JSONObject");
 		
 		return jsonObject;
 		
@@ -66,7 +72,15 @@ public class JSONReader {
 	
 	public static String getTestData(String json, String key) throws IOException, ParseException {
 		
-		return (String) getJsonData(json).get(key); //Fetching the desired key from the JSON
+		JSONObject jsonObject = getJsonData(json);
+		
+		System.out.println("Finding given key......"+jsonObject);
+		
+		if (jsonObject.containsKey(key)) {
+			return (String) jsonObject.get(key); //Fetching the desired key from the JSON
+	    } else {
+	        throw new IllegalArgumentException("Key '" + key + "' not found in the JSON.");
+	    }
 		
 	}
 	

@@ -18,9 +18,7 @@ import utils.JSONReader;
 import utils.SoftAssertionUtil;
 
 public class JSONArrayAPI {
-	
-	SoftAssertionUtil softAssert = new SoftAssertionUtil();
-	
+		
 	@Test(description = "Get user data from page 2 and match first record of dataArray", priority=1)
     public void getUserData() throws IOException, ParseException {
 		
@@ -30,7 +28,7 @@ public class JSONArrayAPI {
        String testData = FileUtils.readFileToString(new File("resources/TestData/UserArray.json"));
        
        
-       softAssert.assertEquals(response.statusCode(), StatusCode.SUCCESS.code, "Something Went Wrong!!");
+       SoftAssertionUtil.getInstance().assertEquals(response.statusCode(), StatusCode.SUCCESS.code, "Something Went Wrong!!");
        
        System.out.println("Actual ID from response : "+JSONReader.getTestData(response.getBody().asString(), "name"));
        System.out.println("Expected ID from response : "+JSONReader.getTestData(testData, "name"));

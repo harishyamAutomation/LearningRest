@@ -28,9 +28,7 @@ import static org.hamcrest.Matchers.*;
 import static org.testng.Assert.assertEquals;
 
 public class getUser extends BaseTest{
-	
-	SoftAssertionUtil softAssert = new SoftAssertionUtil();
-	
+		
     //Get all users detail for the page 2
     @Test(description = "Get all users data from page 2", priority=1)
     public void getUserData() {
@@ -268,8 +266,8 @@ public class getUser extends BaseTest{
                 .params(queryParams)
                 .when().get("/users");
                 
-        softAssert.assertEquals(response.statusCode(), StatusCode.CREATED.code, "Response is not 200");
-        softAssert.AssertAll();
+        SoftAssertionUtil.getInstance().assertEquals(response.statusCode(), StatusCode.SUCCESS.code, "Response is not 200");
+        SoftAssertionUtil.getInstance().AssertAll();
 
         System.out.println("Body : "+response.getBody().asString());
     }
@@ -290,8 +288,8 @@ public class getUser extends BaseTest{
     	
     	Response resp = given().queryParam("page", page).queryParam("per_page", per_page).when().get("https://reqres.in/api/users");
     	
-    	softAssert.assertEquals(resp.statusCode(), StatusCode.SUCCESS.code, "Status code in not 200");
-    	softAssert.AssertAll();
+    	SoftAssertionUtil.getInstance().assertEquals(resp.statusCode(), StatusCode.SUCCESS.code, "Status code in not 200");
+    	SoftAssertionUtil.getInstance().AssertAll();
     	
     }
 }

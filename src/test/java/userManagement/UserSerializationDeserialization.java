@@ -26,7 +26,6 @@ To Test this Test Suit/Script Please follow below instructions :
 
 public class UserSerializationDeserialization extends BaseTest {
 	
-	SoftAssertionUtil softAssert = new SoftAssertionUtil();
 	private static String userid;
 	
 	String name = "Harishyam";
@@ -99,11 +98,11 @@ public class UserSerializationDeserialization extends BaseTest {
 		
 		UserMainPOJO userMainResponse = resp.as(UserMainPOJO.class);
 		
-		softAssert.assertEquals(userMainResponse.getName(), name, "Name is not as expected");
-		softAssert.assertEquals(userMainResponse.getJob(), job, "Job is not as expected");
-		softAssert.assertEquals(userMainResponse.getCity().get(0).getName(), noida.getName(), "Name of the First City is not as expected");
-		softAssert.assertEquals(userMainResponse.getCity().get(0).getTemperature(), noida.getTemperature(), "Temperature of the First City is not as expected");
-		softAssert.AssertAll();
+		SoftAssertionUtil.getInstance().assertEquals(userMainResponse.getName(), name, "Name is not as expected");
+		SoftAssertionUtil.getInstance().assertEquals(userMainResponse.getJob(), job, "Job is not as expected");
+		SoftAssertionUtil.getInstance().assertEquals(userMainResponse.getCity().get(0).getName(), noida.getName(), "Name of the First City is not as expected");
+		SoftAssertionUtil.getInstance().assertEquals(userMainResponse.getCity().get(0).getTemperature(), noida.getTemperature(), "Temperature of the First City is not as expected");
+		SoftAssertionUtil.getInstance().AssertAll();
 		
 		userid = userMainResponse.getId();
 	

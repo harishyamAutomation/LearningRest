@@ -4,15 +4,22 @@ import org.testng.asserts.SoftAssert;
 
 public class SoftAssertionUtil {
 
-	private SoftAssert softAssert;
-	private SoftAssertionUtil softAssertUtil;
+	private static SoftAssert softAssert;
+	private static SoftAssertionUtil softAssertUtil;
 	
-	public SoftAssertionUtil() {
-		softAssert = new SoftAssert();
+	private SoftAssertionUtil() {
+		//softAssert = new SoftAssert();
 	}
 	
-	public SoftAssert getInstance() {
-		if(softAssert == null) {
+	public static SoftAssertionUtil getInstance() {
+		if(softAssertUtil == null) {
+			softAssertUtil = new SoftAssertionUtil();
+		}
+		return softAssertUtil;
+	}
+	
+	private static SoftAssert getSoftAssert() {
+		if(softAssert==null) {
 			softAssert = new SoftAssert();
 		}
 		return softAssert;
@@ -20,33 +27,33 @@ public class SoftAssertionUtil {
 	
 	public void assertTrue(boolean condition, String message) {
 		try {
-			softAssert.assertTrue(condition, message);
+			SoftAssertionUtil.getSoftAssert().assertTrue(condition, message);
 		} catch (AssertionError e) {
-			softAssert.fail(message);
+			SoftAssertionUtil.getSoftAssert().fail(message);
 			// TODO: handle exception
 		}
 	}
 	
 	public void assertEquals(Object actual, Object expected, String message) {
 		try {
-			softAssert.assertEquals(actual, expected, message);
+			SoftAssertionUtil.getSoftAssert().assertEquals(actual, expected, message);
 		} catch (AssertionError e) {
-			softAssert.fail(message);
+			SoftAssertionUtil.getSoftAssert().fail(message);
 			// TODO: handle exception
 		}
 	}
 	
 	public void assertNotEquals(Object actual, Object expected, String message) {
 		try {
-			softAssert.assertNotEquals(actual, expected, message);
+			SoftAssertionUtil.getSoftAssert().assertNotEquals(actual, expected, message);
 		} catch (AssertionError e) {
-			softAssert.fail(message);
+			SoftAssertionUtil.getSoftAssert().fail(message);
 			// TODO: handle exception
 		}
 	}
 	
 	public void AssertAll() {
-		softAssert.assertAll();
+		SoftAssertionUtil.getSoftAssert().assertAll();
 	}
 	
 }

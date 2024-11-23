@@ -26,11 +26,11 @@ public class BaseTest {
     @BeforeSuite(alwaysRun = true)
 	public static void config(@Optional("Optional name Automation ") String reportName, @Optional("API Report") String flow) {
 		
-		String subFolderPath = System.getProperty("user.dir")+"/reports/"+BaseTestHelper.Timestamp();
+		String subFolderPath = System.getProperty("user.dir")+"/reports/"+BaseTestHelper.currentDate();
 		
 		BaseTestHelper.createFolder(subFolderPath);
 		
-		ExtentReport.getInstance().initialize(subFolderPath+"/"+"RestAPI_Automation.html");
+		ExtentReport.getInstance().initialize(subFolderPath+"/"+BaseTestHelper.Timestamp()+"_RestAPI_Automation.html");
 		
 	}
 	

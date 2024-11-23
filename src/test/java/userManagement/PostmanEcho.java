@@ -17,11 +17,7 @@ import static org.hamcrest.Matchers.*;
 import static org.testng.Assert.assertEquals;
 
 public class PostmanEcho extends BaseTest{
-	
-	SoftAssertionUtil softAssert = new SoftAssertionUtil();
-	
-    
-    
+	  
     @Test(description = "Automate Basic Authorization", groups = {"RegressionSuite", "SmokeSuite"}, priority=13)
     public void automateBasicAuth() {
     	baseURI = "https://postman-echo.com";
