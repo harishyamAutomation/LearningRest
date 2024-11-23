@@ -14,7 +14,6 @@ import org.testng.annotations.Test;
 import core.BaseTest;
 import core.StatusCode;
 import io.restassured.response.Response;
-import utils.ExtentReport;
 import utils.ExternalJSONRequestUtil;
 
 public class RequestBodyExternalJSON extends BaseTest {
