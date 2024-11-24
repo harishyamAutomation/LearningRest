@@ -8,14 +8,54 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">RestAPI : Regression Suite by Groups</th></tr>
-<tr><td><a href="#t0">Regression Suite by Groups</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">8,402</td><td>RegressionSuite</td><td></td></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">9</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">21,049</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">RestAPI : Regression Suite by Groups</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression Suite by Groups &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">userManagement.PostmanEcho</td><td><a href="#m0">automateBasicAuth</a></td><td rowspan="1">1732401830239</td><td rowspan="1">4339</td></tr><tr class="passedodd"><td rowspan="3">userManagement.getUser</td><td><a href="#m1">automateMultipleQueryParamsUsingMap</a></td><td rowspan="1">1732401838361</td><td rowspan="1">218</td></tr><tr class="passedodd"><td><a href="#m2">testDataFromJSONFile</a></td><td rowspan="1">1732401834589</td><td rowspan="1">1904</td></tr><tr class="passedodd"><td><a href="#m3">testDataFromJSON_dataFromPropertiesFile</a></td><td rowspan="1">1732401836499</td><td rowspan="1">1850</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">restFullBooker.HealthCheck</td><td><a href="#m0">filterBookingIDsByCheckInOutDate</a></td><td rowspan="1">1732480239220</td><td rowspan="1">1436</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="9">restFullBooker.HealthCheck</td><td><a href="#m1">createNewBooking</a></td><td rowspan="1">1732480234946</td><td rowspan="1">1398</td></tr><tr class="passedeven"><td><a href="#m2">deletecurrentBooking</a></td><td rowspan="1">1732480243437</td><td rowspan="1">1442</td></tr><tr class="passedeven"><td><a href="#m3">fetchAllBookingIDs</a></td><td rowspan="1">1732480233596</td><td rowspan="1">1348</td></tr><tr class="passedeven"><td><a href="#m4">fetchCustomerDetailByID</a></td><td rowspan="1">1732480236345</td><td rowspan="1">1396</td></tr><tr class="passedeven"><td><a href="#m5">filterBookingIDsByName</a></td><td rowspan="1">1732480237744</td><td rowspan="1">1474</td></tr><tr class="passedeven"><td><a href="#m6">getAuthToken</a></td><td rowspan="1">1732480231903</td><td rowspan="1">1691</td></tr><tr class="passedeven"><td><a href="#m7">pingServerForHealthCheck</a></td><td rowspan="1">1732480223860</td><td rowspan="1">8036</td></tr><tr class="passedeven"><td><a href="#m8">updateCurrentBookingPATCH</a></td><td rowspan="1">1732480242056</td><td rowspan="1">1379</td></tr><tr class="passedeven"><td><a href="#m9">updateCurrentBookingPUT</a></td><td rowspan="1">1732480240659</td><td rowspan="1">1396</td></tr></tbody>
 </table>
-<h2>Regression Suite by Groups</h2><h3 id="m0">userManagement.PostmanEcho#automateBasicAuth</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">userManagement.getUser#automateMultipleQueryParamsUsingMap</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">userManagement.getUser#testDataFromJSONFile</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">userManagement.getUser#testDataFromJSON_dataFromPropertiesFile</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">restFullBooker.HealthCheck#filterBookingIDsByCheckInOutDate</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	BookingIDs not found expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at utils.SoftAssertionUtil.AssertAll(SoftAssertionUtil.java:53)
+	at restFullBooker.HealthCheck.filterBookingIDsByCheckInOutDate(HealthCheck.java:182)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">restFullBooker.HealthCheck#createNewBooking</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">restFullBooker.HealthCheck#deletecurrentBooking</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">restFullBooker.HealthCheck#fetchAllBookingIDs</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">restFullBooker.HealthCheck#fetchCustomerDetailByID</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">restFullBooker.HealthCheck#filterBookingIDsByName</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">restFullBooker.HealthCheck#getAuthToken</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">restFullBooker.HealthCheck#pingServerForHealthCheck</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">restFullBooker.HealthCheck#updateCurrentBookingPATCH</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">restFullBooker.HealthCheck#updateCurrentBookingPUT</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

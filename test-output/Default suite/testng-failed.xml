@@ -6,13 +6,10 @@
       <class name="restFullBooker.HealthCheck">
         <methods>
           <include name="endReport"/>
-          <include name="fetchCustomerDetailByID"/>
-          <include name="fetchAllBookingIDs"/>
           <include name="logBeforeMethod"/>
-          <include name="pingServerForHealthCheck"/>
           <include name="getResult"/>
-          <include name="getAuthToken"/>
           <include name="config"/>
+          <include name="filterBookingIDsByCheckInOutDate"/>
         </methods>
       </class> <!-- restFullBooker.HealthCheck -->
     </classes>

@@ -47,16 +47,19 @@ public class BaseTest {
 	
 	@AfterMethod(alwaysRun = true)
 	public void getResult(ITestResult result) {
+		
+		//result.getAttribute("description");
 				
 		if(result.getStatus()==ITestResult.SUCCESS) {
 			//ExtentReport.getTest().log(LogStatus.PASS, "Test Case : "+result.getName()+" has been <b>PASSED</b>");
-			ExtentReport.getTest().generateLog(Status.PASS, "Test Case : "+result.getName()+" has been <b>PASSED</b>");
+			ExtentReport.getTest().generateLog(Status.PASS, result.getName()+" : "+result.getMethod().getDescription()+" has been <b>PASSED</b>");
 		}else if (result.getStatus()==ITestResult.FAILURE) {
-			ExtentReport.getTest().generateLog(Status.FAIL, "Test Case : "+result.getName()+" has been <b>FAILED</b>");
-			ExtentReport.getTest().generateLog(Status.FAIL, "Test Case failed due to : "+result.getThrowable());
+			ExtentReport.getTest().generateLog(Status.FAIL, result.getName()+" : "+result.getMethod().getDescription()+" has been <b>FAILED</b> <br/> due to : <br/>"+result.getThrowable());
+			
+			//ExtentReport.getTest().generateLog(result.getName()+" : "+result.getMethod().getDescription()+" has failed due to : "+result.getThrowable());
 			
 		}else if (result.getStatus()==ITestResult.SKIP){
-			ExtentReport.getTest().generateLog(Status.SKIP, "Test Case : "+result.getName()+" has been <b>SKIPPED</b>");
+			ExtentReport.getTest().generateLog(Status.SKIP, result.getName()+" : "+result.getMethod().getDescription()+" has been <b>SKIPPED</b>");
 		}
 		
 		//ExtentReport.getTest().endTest(ExtentReport.getTest());

@@ -46,4 +46,21 @@ public class UserRequestSpecification {
 			return requestSpecification;
 	}
 
+	public RequestSpecification getRequestSpecification(String uri, Map<String, String> headers) {
+		requestSpecification = new RequestSpecBuilder()
+				.setBaseUri(uri)
+				.addHeaders(headers)
+				.build();	
+		return requestSpecification;
+	}
+	
+	public RequestSpecification getRequestSpecification(String uri, Map<String, String> headers, Map<String, String> queryParam) {
+		requestSpecification = new RequestSpecBuilder()
+				.setBaseUri(uri)
+				.addHeaders(headers)
+				.addQueryParams(queryParam)
+				.build();	
+		return requestSpecification;
+	}
+
 }
