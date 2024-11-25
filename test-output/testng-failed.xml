@@ -5,10 +5,10 @@
     <classes>
       <class name="restFullBooker.HealthCheck">
         <methods>
-          <include name="endReport"/>
-          <include name="logBeforeMethod"/>
           <include name="getResult"/>
           <include name="config"/>
+          <include name="endReport"/>
+          <include name="logBeforeMethod"/>
           <include name="filterBookingIDsByCheckInOutDate"/>
         </methods>
       </class> <!-- restFullBooker.HealthCheck -->

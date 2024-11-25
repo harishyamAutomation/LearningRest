@@ -2,13 +2,13 @@ package userManagement;
 
 import org.testng.annotations.*;
 
-import core.BaseTest;
 import core.StatusCode;
 import io.restassured.response.Response;
 import pojo.CityList;
 import pojo.UserMainPOJO;
+import utility.BaseTest;
+import utility.SoftAssertionUtil;
 import utils.ExtentReport;
-import utils.SoftAssertionUtil;
 
 import static io.restassured.RestAssured.*;
 

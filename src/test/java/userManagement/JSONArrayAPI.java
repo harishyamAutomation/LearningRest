@@ -14,8 +14,8 @@ import org.testng.annotations.Test;
 
 import core.StatusCode;
 import io.restassured.response.Response;
+import utility.SoftAssertionUtil;
 import utils.JSONReader;
-import utils.SoftAssertionUtil;
 
 public class JSONArrayAPI {
 		

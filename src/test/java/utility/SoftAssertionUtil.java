@@ -1,4 +1,4 @@
-package utils;
+package utility;
 
 import org.testng.asserts.SoftAssert;
 

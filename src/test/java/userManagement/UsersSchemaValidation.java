@@ -7,11 +7,11 @@ import java.io.IOException;
 
 import org.testng.annotations.Test;
 
-import core.BaseTest;
 import core.StatusCode;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import userSpecification.UserRequestSpecification;
+import utility.BaseTest;
 import utils.ExtentReport;
 
 public class UsersSchemaValidation extends BaseTest {

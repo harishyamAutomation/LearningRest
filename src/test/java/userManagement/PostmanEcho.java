@@ -2,12 +2,11 @@ package userManagement;
 
 import io.restassured.authentication.OAuthSignature;
 import io.restassured.response.Response;
+import utility.BaseTest;
 import utils.ExtentReport;
-import utils.SoftAssertionUtil;
 
 import org.testng.annotations.Test;
 
-import core.BaseTest;
 import core.StatusCode;
 import helper.BaseTestHelper;
 

@@ -7,7 +7,7 @@ import java.util.Map;
 import org.json.simple.parser.ParseException;
 import org.testng.annotations.Test;
 
-import core.BaseTest;
+
 import core.StatusCode;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -15,8 +15,9 @@ import pojo.AuthTokenPOJO;
 import pojo.BookingDetailPOJO;
 import pojo.CustomerDetailPOJO;
 import userSpecification.UserRequestSpecification;
+import utility.BaseTest;
+import utility.SoftAssertionUtil;
 import utils.JSONReader;
-import utils.SoftAssertionUtil;
 
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -31,7 +32,7 @@ public class HealthCheck extends BaseTest{
 	private static String authToken;
 	private static int bookingId;
 	
-	@Test(description = "RB_01 : Test to validate the Healthcheck point for the API.", priority=1)
+	@Test(description = "RB_01 : Test to validate the Healthcheck point for the API.", priority=1, groups = {"SmokeSuite"})
 	public void pingServerForHealthCheck() throws IOException, ParseException {
 		softAssertUtil = new SoftAssertionUtil();
 		

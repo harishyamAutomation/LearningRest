@@ -11,9 +11,9 @@ import java.io.IOException;
 import org.apache.commons.io.IOUtils;
 import org.testng.annotations.Test;
 
-import core.BaseTest;
 import core.StatusCode;
 import io.restassured.response.Response;
+import utility.BaseTest;
 import utils.ExternalJSONRequestUtil;
 
 public class RequestBodyExternalJSON extends BaseTest {

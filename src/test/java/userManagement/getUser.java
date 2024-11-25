@@ -1,6 +1,6 @@
 package userManagement;
 
-import core.BaseTest;
+import utility.BaseTest;
 import core.StatusCode;
 import helper.BaseTestHelper;
 import io.restassured.authentication.OAuthSignature;
@@ -9,7 +9,7 @@ import io.restassured.response.Response;
 import utils.ExtentReport;
 import utils.JSONReader;
 import utils.PropertyReader;
-import utils.SoftAssertionUtil;
+import utility.SoftAssertionUtil;
 
 import org.json.simple.parser.ParseException;
 import org.testng.annotations.DataProvider;
